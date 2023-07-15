@@ -3,10 +3,12 @@ import Config from "../.graphqlrc.js";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { Resolvers } from "./generated/graphql.js";
+import { DateTimeResolver } from "graphql-scalars";
 
 const typeDefs = await loadFiles(Config.schema);
 
 const resolvers = {
+	DateTime: DateTimeResolver,
 	Query: {
 		async product(parent, args) {
 			// return {

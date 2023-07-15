@@ -24,6 +24,7 @@
 	"dependencies": {
 		"@apollo/server": "4.7.5",
 		"@graphql-tools/load-files": "7.0.0",
+		"graphql-scalars": "1.22.2",
 		"graphql-yoga": "4.0.3"
 	}
 }

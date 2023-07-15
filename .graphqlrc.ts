@@ -8,6 +8,9 @@ const config = {
 			plugins: ["typescript", "typescript-resolvers"],
 			config: {
 				defaultMapper: "../types.js#Mapper<{T}>",
+				scalars: {
+					DateTime: "Date",
+				},
 			},
 		},
 	},
