@@ -11,6 +11,9 @@ dependencies:
   '@graphql-tools/load-files':
     specifier: 7.0.0
     version: registry.npmjs.org/@graphql-tools/load-files@7.0.0(graphql@16.7.1)
+  '@prisma/client':
+    specifier: 5.0.0
+    version: registry.npmjs.org/@prisma/client@5.0.0(prisma@5.0.0)
   graphql-scalars:
     specifier: 1.22.2
     version: registry.npmjs.org/graphql-scalars@1.22.2(graphql@16.7.1)
@@ -19,18 +22,21 @@ dependencies:
     version: registry.npmjs.org/graphql-yoga@4.0.3(graphql@16.7.1)
 
 devDependencies:
+  '@eddeee888/gcg-typescript-resolver-files':
+    specifier: 0.5.0
+    version: registry.npmjs.org/@eddeee888/gcg-typescript-resolver-files@0.5.0(graphql@16.7.1)
+  '@faker-js/faker':
+    specifier: 8.0.2
+    version: registry.npmjs.org/@faker-js/faker@8.0.2
   '@graphql-codegen/cli':
     specifier: 4.0.1
     version: registry.npmjs.org/@graphql-codegen/cli@4.0.1(@babel/core@7.22.9)(graphql@16.7.1)
-  '@graphql-codegen/typescript':
-    specifier: 4.0.1
-    version: registry.npmjs.org/@graphql-codegen/typescript@4.0.1(graphql@16.7.1)
-  '@graphql-codegen/typescript-resolvers':
-    specifier: 4.0.1
-    version: registry.npmjs.org/@graphql-codegen/typescript-resolvers@4.0.1(graphql@16.7.1)
   graphql:
     specifier: 16.7.1
     version: registry.npmjs.org/graphql@16.7.1
+  prettier:
+    specifier: 3.0.0
+    version: registry.npmjs.org/prettier@3.0.0
   prisma:
     specifier: 5.0.0
     version: registry.npmjs.org/prisma@5.0.0
@@ -1018,6 +1024,25 @@ packages:
       to-fast-properties: registry.npmjs.org/to-fast-properties@2.0.0
     dev: true
 
+  registry.npmjs.org/@eddeee888/gcg-typescript-resolver-files@0.5.0(graphql@16.7.1):
+    resolution: {integrity: sha512-NKLi1+Z4VCIVGui4kOyr/6Do5hBSbMAKvalH4kPe8/3/yHzB+tNKIjVsppncccdZ8kGXWYckSv1qri8F54pJyQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@eddeee888/gcg-typescript-resolver-files/-/gcg-typescript-resolver-files-0.5.0.tgz}
+    id: registry.npmjs.org/@eddeee888/gcg-typescript-resolver-files/0.5.0
+    name: '@eddeee888/gcg-typescript-resolver-files'
+    version: 0.5.0
+    peerDependencies:
+      graphql: ^15.0.0 || ^16.0.0
+    dependencies:
+      '@graphql-codegen/add': registry.npmjs.org/@graphql-codegen/add@5.0.0(graphql@16.7.1)
+      '@graphql-codegen/plugin-helpers': registry.npmjs.org/@graphql-codegen/plugin-helpers@5.0.0(graphql@16.7.1)
+      '@graphql-codegen/typescript': registry.npmjs.org/@graphql-codegen/typescript@4.0.1(graphql@16.7.1)
+      '@graphql-codegen/typescript-resolvers': registry.npmjs.org/@graphql-codegen/typescript-resolvers@4.0.1(graphql@16.7.1)
+      graphql: registry.npmjs.org/graphql@16.7.1
+      ts-morph: registry.npmjs.org/ts-morph@18.0.0
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+    dev: true
+
   registry.npmjs.org/@envelop/core@4.0.0:
     resolution: {integrity: sha512-6usEZO86hWT0ZajAbhOX0QXlV++lrlEmu8br6KQVvyXOxttiHADIibgfzb3GtSI7RnnJDnrcRb7Jynv6Lca3iQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@envelop/core/-/core-4.0.0.tgz}
     name: '@envelop/core'
@@ -1305,6 +1330,26 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  registry.npmjs.org/@faker-js/faker@8.0.2:
+    resolution: {integrity: sha512-Uo3pGspElQW91PCvKSIAXoEgAUlRnH29sX2/p89kg7sP1m2PzCufHINd0FhTXQf6DYGiUlVncdSPa2F9wxed2A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@faker-js/faker/-/faker-8.0.2.tgz}
+    name: '@faker-js/faker'
+    version: 8.0.2
+    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
+    dev: true
+
+  registry.npmjs.org/@graphql-codegen/add@5.0.0(graphql@16.7.1):
+    resolution: {integrity: sha512-ynWDOsK2yxtFHwcJTB9shoSkUd7YXd6ZE57f0nk7W5cu/nAgxZZpEsnTPEpZB/Mjf14YRGe2uJHQ7AfElHjqUQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@graphql-codegen/add/-/add-5.0.0.tgz}
+    id: registry.npmjs.org/@graphql-codegen/add/5.0.0
+    name: '@graphql-codegen/add'
+    version: 5.0.0
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      '@graphql-codegen/plugin-helpers': registry.npmjs.org/@graphql-codegen/plugin-helpers@5.0.0(graphql@16.7.1)
+      graphql: registry.npmjs.org/graphql@16.7.1
+      tslib: registry.npmjs.org/tslib@2.5.3
+    dev: true
 
   registry.npmjs.org/@graphql-codegen/cli@4.0.1(@babel/core@7.22.9)(graphql@16.7.1):
     resolution: {integrity: sha512-/H4imnGOl3hoPXLKmIiGUnXpmBmeIClSZie/YHDzD5N59cZlGGJlIOOrUlOTDpJx5JNU1MTQcRjyTToOYM5IfA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@graphql-codegen/cli/-/cli-4.0.1.tgz}
@@ -2246,12 +2291,34 @@ packages:
       webcrypto-core: registry.npmjs.org/webcrypto-core@1.7.7
     dev: true
 
+  registry.npmjs.org/@prisma/client@5.0.0(prisma@5.0.0):
+    resolution: {integrity: sha512-XlO5ELNAQ7rV4cXIDJUNBEgdLwX3pjtt9Q/RHqDpGf43szpNJx2hJnggfFs7TKNx0cOFsl6KJCSfqr5duEU/bQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@prisma/client/-/client-5.0.0.tgz}
+    id: registry.npmjs.org/@prisma/client/5.0.0
+    name: '@prisma/client'
+    version: 5.0.0
+    engines: {node: '>=16.13'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': registry.npmjs.org/@prisma/engines-version@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
+      prisma: registry.npmjs.org/prisma@5.0.0
+    dev: false
+
+  registry.npmjs.org/@prisma/engines-version@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584:
+    resolution: {integrity: sha512-HHiUF6NixsldsP3JROq07TYBLEjXFKr6PdH8H4gK/XAoTmIplOJBCgrIUMrsRAnEuGyRoRLXKXWUb943+PFoKQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@prisma/engines-version/-/engines-version-4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584.tgz}
+    name: '@prisma/engines-version'
+    version: 4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584
+    dev: false
+
   registry.npmjs.org/@prisma/engines@5.0.0:
     resolution: {integrity: sha512-kyT/8fd0OpWmhAU5YnY7eP31brW1q1YrTGoblWrhQJDiN/1K+Z8S1kylcmtjqx5wsUGcP1HBWutayA/jtyt+sg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@prisma/engines/-/engines-5.0.0.tgz}
     name: '@prisma/engines'
     version: 5.0.0
     requiresBuild: true
-    dev: true
 
   registry.npmjs.org/@protobufjs/aspromise@1.1.2:
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@protobufjs/aspromise/-/aspromise-1.1.2.tgz}
@@ -2320,6 +2387,17 @@ packages:
     resolution: {integrity: sha512-AW8PKd6iX3vAZ0vA43nOUOnbq/X5ihgU+mSXXqunMkeQADGiqw/PY0JNeYtD5sr0PAy51YPgAPbDoeapv9r8WA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@repeaterjs/repeater/-/repeater-3.0.4.tgz}
     name: '@repeaterjs/repeater'
     version: 3.0.4
+
+  registry.npmjs.org/@ts-morph/common@0.19.0:
+    resolution: {integrity: sha512-Unz/WHmd4pGax91rdIKWi51wnVUW11QttMEPpBiBgIewnc9UQIX7UDLxr5vRlqeByXCwhkF6VabSsI0raWcyAQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@ts-morph/common/-/common-0.19.0.tgz}
+    name: '@ts-morph/common'
+    version: 0.19.0
+    dependencies:
+      fast-glob: registry.npmjs.org/fast-glob@3.3.0
+      minimatch: registry.npmjs.org/minimatch@7.4.6
+      mkdirp: registry.npmjs.org/mkdirp@2.1.6
+      path-browserify: registry.npmjs.org/path-browserify@1.0.1
+    dev: true
 
   registry.npmjs.org/@types/body-parser@1.19.2:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.2.tgz}
@@ -2763,6 +2841,14 @@ packages:
       concat-map: registry.npmjs.org/concat-map@0.0.1
     dev: true
 
+  registry.npmjs.org/brace-expansion@2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/brace-expansion/-/brace-expansion-2.0.1.tgz}
+    name: brace-expansion
+    version: 2.0.1
+    dependencies:
+      balanced-match: registry.npmjs.org/balanced-match@1.0.2
+    dev: true
+
   registry.npmjs.org/braces@3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/braces/-/braces-3.0.2.tgz}
     name: braces
@@ -2999,6 +3085,12 @@ packages:
     name: clone
     version: 1.0.4
     engines: {node: '>=0.8'}
+    dev: true
+
+  registry.npmjs.org/code-block-writer@12.0.0:
+    resolution: {integrity: sha512-q4dMFMlXtKR3XNBHyMHt/3pwYNA69EDk00lloMOaaUMKPUXBw6lpXtbu3MMVG6/uOihGnRDOlkyqsONEUj60+w==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/code-block-writer/-/code-block-writer-12.0.0.tgz}
+    name: code-block-writer
+    version: 12.0.0
     dev: true
 
   registry.npmjs.org/color-convert@1.9.3:
@@ -4361,6 +4453,23 @@ packages:
       brace-expansion: registry.npmjs.org/brace-expansion@1.1.11
     dev: true
 
+  registry.npmjs.org/minimatch@7.4.6:
+    resolution: {integrity: sha512-sBz8G/YjVniEz6lKPNpKxXwazJe4c19fEfV2GDMX6AjFz+MX9uDWIZW8XreVhkFW3fkIdTv/gxWr/Kks5FFAVw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/minimatch/-/minimatch-7.4.6.tgz}
+    name: minimatch
+    version: 7.4.6
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: registry.npmjs.org/brace-expansion@2.0.1
+    dev: true
+
+  registry.npmjs.org/mkdirp@2.1.6:
+    resolution: {integrity: sha512-+hEnITedc8LAtIP9u3HJDFIdcLV2vXP33sqLLIzkv1Db1zO/1OxbvYf0Y1OC/S/Qo5dxHXepofhmxL02PsKe+A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/mkdirp/-/mkdirp-2.1.6.tgz}
+    name: mkdirp
+    version: 2.1.6
+    engines: {node: '>=10'}
+    hasBin: true
+    dev: true
+
   registry.npmjs.org/ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/ms/-/ms-2.0.0.tgz}
     name: ms
@@ -4614,6 +4723,12 @@ packages:
       tslib: registry.npmjs.org/tslib@2.6.0
     dev: true
 
+  registry.npmjs.org/path-browserify@1.0.1:
+    resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/path-browserify/-/path-browserify-1.0.1.tgz}
+    name: path-browserify
+    version: 1.0.1
+    dev: true
+
   registry.npmjs.org/path-case@3.0.4:
     resolution: {integrity: sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/path-case/-/path-case-3.0.4.tgz}
     name: path-case
@@ -4677,6 +4792,14 @@ packages:
     version: 2.3.1
     engines: {node: '>=8.6'}
 
+  registry.npmjs.org/prettier@3.0.0:
+    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/prettier/-/prettier-3.0.0.tgz}
+    name: prettier
+    version: 3.0.0
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
+
   registry.npmjs.org/prisma@5.0.0:
     resolution: {integrity: sha512-KYWk83Fhi1FH59jSpavAYTt2eoMVW9YKgu8ci0kuUnt6Dup5Qy47pcB4/TLmiPAbhGrxxSz7gsSnJcCmkyPANA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/prisma/-/prisma-5.0.0.tgz}
     name: prisma
@@ -4686,7 +4809,6 @@ packages:
     requiresBuild: true
     dependencies:
       '@prisma/engines': registry.npmjs.org/@prisma/engines@5.0.0
-    dev: true
 
   registry.npmjs.org/promise@7.3.1:
     resolution: {integrity: sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/promise/-/promise-7.3.1.tgz}
@@ -5215,6 +5337,15 @@ packages:
     resolution: {integrity: sha512-PGcnJoTBnVGy6yYNFxWVNkdcAuAMstvutN9MgDJIV6L0oG8fB+ZNNy1T+wJzah8RPGor1mZuPQkVfXNDpy9eHA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/ts-log/-/ts-log-2.2.5.tgz}
     name: ts-log
     version: 2.2.5
+    dev: true
+
+  registry.npmjs.org/ts-morph@18.0.0:
+    resolution: {integrity: sha512-Kg5u0mk19PIIe4islUI/HWRvm9bC1lHejK4S0oh1zaZ77TMZAEmQC0sHQYiu2RgCQFZKXz1fMVi/7nOOeirznA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/ts-morph/-/ts-morph-18.0.0.tgz}
+    name: ts-morph
+    version: 18.0.0
+    dependencies:
+      '@ts-morph/common': registry.npmjs.org/@ts-morph/common@0.19.0
+      code-block-writer: registry.npmjs.org/code-block-writer@12.0.0
     dev: true
 
   registry.npmjs.org/tslib@2.5.3:

@@ -1,44 +1,26 @@
-import { loadFiles } from "@graphql-tools/load-files";
-import Config from "../.graphqlrc.js";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import { Resolvers } from "./generated/graphql.js";
-import { DateTimeResolver } from "graphql-scalars";
+import { typeDefs } from "./graphql/typeDefs.generated.js";
+import { resolvers } from "./graphql/resolvers.generated.js";
 
-const typeDefs = await loadFiles(Config.schema);
-
-const resolvers = {
-	DateTime: DateTimeResolver,
-	Query: {
-		async product(parent, args) {
-			// return {
-			// 	id: "1",
-			// 	name: "Product 1",
-			// 	// reviews: [],
-			// };
-			return null;
-		},
-		async reviews(parent, args) {
-			return [
-				{
-					id: "1",
-					body: "Review 1",
-				},
-			];
-		},
-	},
-	Product: {
-		reviews(parent, args) {},
-	},
-} satisfies Resolvers;
+import { PrismaClient } from "@prisma/client";
 
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
 });
 
+const prisma = new PrismaClient({
+	log: ["query", "info", "warn", "error"],
+});
+
 const { url } = await startStandaloneServer(server, {
 	listen: { port: 4000 },
+	context: async () => {
+		return {
+			prisma,
+		};
+	},
 });
 
 console.log(`🚀  Server ready at: ${url}`);

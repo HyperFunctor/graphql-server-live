@@ -1,0 +1,22 @@
+extend type Query {
+	product(id: ID!): Product
+	products(first: Int!, skip: Int): [Product!]!
+}
+
+type Image {
+	url: String!
+}
+
+type Product {
+	id: ID!
+	name: String!
+	slug: String!
+	description: String!
+	price: Int!
+	images: [Image!]!
+
+	reviews: [Review!]!
+
+	createdAt: DateTime!
+	updatedAt: DateTime!
+}

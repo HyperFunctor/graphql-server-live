@@ -1,18 +1,28 @@
 import type { CodegenConfig } from "@graphql-codegen/cli";
+import { defineConfig } from "@eddeee888/gcg-typescript-resolver-files";
 
 const config = {
 	overwrite: true,
-	schema: "./src/schema/**/schema.graphql",
+	schema: "./src/schema/**/*.graphql",
 	generates: {
-		"src/generated/graphql.ts": {
-			plugins: ["typescript", "typescript-resolvers"],
-			config: {
+		"src/graphql/": defineConfig({
+			typesPluginsConfig: {
+				optionalInfoArgument: true,
 				defaultMapper: "../types.js#Mapper<{T}>",
-				scalars: {
-					DateTime: "Date",
+				contextType: "../types.js#Context",
+			},
+			scalarsOverrides: {
+				ID: {
+					type: "string",
+				},
+				DateTime: {
+					type: "Date",
 				},
 			},
-		},
+		}),
+	},
+	hooks: {
+		afterAllFileWrite: ["pnpm prettier --write"],
 	},
 } satisfies CodegenConfig;
 
