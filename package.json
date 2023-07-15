@@ -6,6 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"codegen": "graphql-codegen --config .graphqlrc.ts",
+		"postinstall": "pnpm codegen",
 		"dev": "tsx watch src/server.ts"
 	},
 	"keywords": [],
@@ -16,6 +17,7 @@
 		"@graphql-codegen/typescript": "4.0.1",
 		"@graphql-codegen/typescript-resolvers": "4.0.1",
 		"graphql": "16.7.1",
+		"prisma": "5.0.0",
 		"tsx": "3.12.7",
 		"typescript": "5.1.6"
 	},

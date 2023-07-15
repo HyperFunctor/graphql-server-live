@@ -6,6 +6,9 @@ const config = {
 	generates: {
 		"src/generated/graphql.ts": {
 			plugins: ["typescript", "typescript-resolvers"],
+			config: {
+				defaultMapper: "../types.js#Mapper<{T}>",
+			},
 		},
 	},
 } satisfies CodegenConfig;

@@ -1,34 +1,40 @@
-import { Resolvers } from "./generated/graphql.js";
 import { loadFiles } from "@graphql-tools/load-files";
 import Config from "../.graphqlrc.js";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
+import { Resolvers } from "./generated/graphql.js";
 
 const typeDefs = await loadFiles(Config.schema);
 
 const resolvers = {
 	Query: {
-		user: (_parent, args) => {
-			return {
-				id: args.id,
-				fullName: "John Doe",
-				isAdmin: false,
-			};
+		async product(parent, args) {
+			// return {
+			// 	id: "1",
+			// 	name: "Product 1",
+			// 	// reviews: [],
+			// };
+			return null;
 		},
+		async reviews(parent, args) {
+			return [
+				{
+					id: "1",
+					body: "Review 1",
+				},
+			];
+		},
+	},
+	Product: {
+		reviews(parent, args) {},
 	},
 } satisfies Resolvers;
 
-// The ApolloServer constructor requires two parameters: your schema
-// definition and your set of resolvers.
 const server = new ApolloServer({
 	typeDefs,
 	resolvers,
 });
 
-// Passing an ApolloServer instance to the `startStandaloneServer` function:
-//  1. creates an Express app
-//  2. installs your ApolloServer instance as middleware
-//  3. prepares your app to handle incoming requests
 const { url } = await startStandaloneServer(server, {
 	listen: { port: 4000 },
 });
