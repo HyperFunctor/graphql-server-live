@@ -18,4 +18,4 @@ Dowiedz się jak średnie i duże firmy z branży e-commerce wykorzystują Graph
 - ✅ Samodokumentujące API
 - ✅ Wieloźródłowość
 
-By [@mmiszy](https://github.com/mmiszy) & [@zaiste](https://github.com/zaiste)https://github.com/zaiste
+By [@mmiszy](https://github.com/mmiszy) & [@zaiste](https://github.com/zaiste)
